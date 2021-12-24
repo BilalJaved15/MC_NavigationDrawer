@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group
+        android:id="@+id/group2"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/switchActivity"
+            android:title="Switch Activity" />
+    </group>
+    <group android:menuCategory="container">
+        <item android:title="Repository">
+            <menu>
+                <item
+                    android:id="@+id/repo"
+                    android:title="Repository Link" />
+                <item
+                    android:id="@+id/exit"
+                    android:title="Exit" />
+
+            </menu>
+        </item>
+    </group>
+</menu>

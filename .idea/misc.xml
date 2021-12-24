@@ -3,7 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/bilal/AndroidStudioProjects/NavigationDrawer/app/src/main/res/layout-v23/drawer_head.xml" value="0.12771739130434784" />
         <entry key="..\:/Users/bilal/AndroidStudioProjects/NavigationDrawer/app/src/main/res/layout/activity_main.xml" value="0.1490036231884058" />
+        <entry key="..\:/Users/bilal/AndroidStudioProjects/NavigationDrawer/app/src/main/res/layout/activity_sample.xml" value="0.1490036231884058" />
+        <entry key="..\:/Users/bilal/AndroidStudioProjects/NavigationDrawer/app/src/main/res/layout/drawer_head.xml" value="0.1490036231884058" />
+        <entry key="..\:/Users/bilal/AndroidStudioProjects/NavigationDrawer/app/src/main/res/menu/drawer_menu.xml" value="0.20416666666666666" />
       </map>
     </option>
   </component>

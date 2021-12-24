@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Navigation Drawer</string>
+    <string name="OPEN">Open</string>
+    <string name="CLOSE">Close</string>
 </resources>

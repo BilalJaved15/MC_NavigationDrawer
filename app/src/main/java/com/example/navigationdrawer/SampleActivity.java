@@ -1,6 +1,5 @@
 package com.example.navigationdrawer;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
@@ -8,11 +7,10 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.view.MenuItem;
 
 import com.google.android.material.navigation.NavigationView;
 
-public class MainActivity extends AppCompatActivity {
+public class SampleActivity extends AppCompatActivity {
 
     DrawerLayout myDrawer;
     ActionBarDrawerToggle NavigationBar;
@@ -21,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_sample);
 
         myDrawer = findViewById(R.id.drawer);
         NavigationBar = new ActionBarDrawerToggle(this,myDrawer,R.string.OPEN,R.string.CLOSE);
@@ -29,8 +27,8 @@ public class MainActivity extends AppCompatActivity {
         NavigationBar.syncState();
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         navigationView = findViewById(R.id.navigation);
-        navigationView.setNavigationItemSelectedListener(v -> {
-            switch (v.getItemId()){
+        navigationView.setNavigationItemSelectedListener(item -> {
+            switch (item.getItemId()){
                 case R.id.repo:
                     Intent repo_intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/BilalJaved15/MC_NavigationDrawer"));
                     startActivity(repo_intent);
@@ -40,21 +38,12 @@ public class MainActivity extends AppCompatActivity {
                     System.exit(0);
                     return true;
                 case R.id.switchActivity:
-                    Intent addContact = new Intent(MainActivity.this,SampleActivity.class);
+                    Intent addContact = new Intent(SampleActivity.this,MainActivity.class);
                     startActivity(addContact);
                     return true;
                 default:
                     return true;
             }
         });
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        //side drawer
-        if(NavigationBar.onOptionsItemSelected(item)){
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
     }
 }
